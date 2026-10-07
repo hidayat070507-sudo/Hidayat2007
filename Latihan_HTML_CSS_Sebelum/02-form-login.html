@@ -5,6 +5,74 @@
     <title>02 - Form Login - Sebelum</title>
 </head>
 <body>
+    
+<style>
+    /* CSS reset dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Atur body agar konten berada di tengah layar */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0; /* Warna abu-abu terang */
+        font-family: Arial, sans-serif;
+    }
+
+    /* Gaya untuk kontainer form login */
+    .login-container {
+        background-color: #ffffff; /* Background putih */
+        padding: 30px; /* Padding */
+        border-radius: 8px; /* Border-radius */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-shadow halus */
+        width: 300px; /* Lebar sekitar 300px */
+    }
+
+    /* Gaya untuk label */
+    .login-container label {
+        display: block; /* Display block agar input berada di bawahnya */
+        margin-bottom: 5px; /* Margin bawah untuk jarak dengan input */
+    }
+
+    /* Gaya untuk input text dan password */
+    .login-container input[type="email"],
+    .login-container input[type="password"] {
+        width: 100%; /* Lebar penuh */
+        padding: 10px; /* Padding */
+        margin-bottom: 15px; /* Margin bawah untuk jarak dengan elemen berikutnya */
+        border: 1px solid #ccc; /* Border abu-abu */
+        border-radius: 5px; /* Border-radius */
+    }
+
+    /* Pseudo-class :focus pada input */
+    .login-container input[type="email"]:focus,
+    .login-container input[type="password"]:focus {
+        border-color: #007BFF; /* Ubah warna border menjadi biru saat fokus */
+        outline: none; /* Hilangkan outline default browser saat fokus */
+    }
+
+    /* Gaya untuk tombol submit */
+    .login-container button[type="submit"] {
+        width: 100%; /* Lebar penuh */
+        background-color: #007BFF; /* Warna background biru */
+        color: #ffffff; /* Warna teks putih */
+        padding: 10px; /* Padding */
+        border-radius: 5px; /* Border-radius */
+        cursor: pointer; /* Ubah cursor menjadi pointer saat hover */
+        border: none; /* Hilangkan border default */
+    }
+
+    /* Efek hover pada tombol submit */
+    .login-container button[type="submit"]:hover {
+        background-color: #0056b3; /* Ubah warna background saat hover */
+    }
+</style>
+
     <!-- 
     INSTRUKSI PENGERJAAN (TO-DO LIST):
     1. Atur body agar form berada di tengah layar (Flexbox, min-height 100vh).

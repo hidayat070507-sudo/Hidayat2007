@@ -5,6 +5,59 @@
     <title>09 - Testimoni - Sebelum</title>
 </head>
 <body>
+
+<style>
+    /* CSS reset dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Atur body agar konten berada di tengah layar */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0; /* Warna abu-abu terang */
+        font-family: Arial, sans-serif;
+    }
+
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .card {
+        background-color: #ffffff; /* Background putih */
+        padding: 20px; /* Padding */
+        border-radius: 10px; /* Border-radius */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-shadow halus */
+        position: relative; /* Posisi relatif untuk pseudo-element */
+    }
+
+    .card::before {
+        content: '"'; /* Karakter tanda kutip besar */
+        font-size: 80px; /* Ukuran sangat besar */
+        color: rgba(0, 0, 0, 0.05); /* Warna sangat pudar */
+        position: absolute; /* Posisi absolut */
+        top: -20px; /* Atur posisi atas */
+        left: -10px; /* Atur posisi kiri */
+        z-index: -1; /* Z-index rendah agar berada di belakang konten */
+    }
+
+    .author {
+        display: flex; /* Flexbox untuk menyejajarkan nama dan jabatan */
+        flex-direction: column; /* Arah vertikal */
+        align-items: flex-start; /* Rata kiri */
+        margin-top: 15px; /* Margin atas untuk jarak dengan teks testimoni */
+    }   
+</style>
+
     <!-- 
     INSTRUKSI PENGERJAAN:
     1. Atur container ".testimonial-grid" menggunakan CSS Grid. Gunakan grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) dan beri gap.

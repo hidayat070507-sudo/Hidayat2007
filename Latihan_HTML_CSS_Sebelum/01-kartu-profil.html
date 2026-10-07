@@ -2,61 +2,64 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>01 - Kartu Profil - Sebelum</title>
 </head>
 <body>
-    <style>
-        /* CSS reset dasar */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            min-height: 100vh;
-            justify-content: center;
-            align-items: center;
-            background-color:#f1f5f9;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
 
-         <!--profile-card-->
+<style>
+    /* CSS reset dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        .profile-card {
-            background: white;
-            width: 300px;
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    /* Atur body agar konten berada di tengah layar */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0; /* Warna abu-abu terang */
+        font-family: Arial, sans-serif;
+    }
 
-        .profile-card img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-        
-        .profile-card h2 {
-            margin-bottom: 8px;
-            color:#1e293b;
-        }
+    /* Gaya untuk kartu profil */
+    .profile-card {
+        background-color: #ffffff; /* Background putih */
+        width: 300px; /* Lebar sekitar 300px */
+        padding: 20px; /* Padding */
+        border-radius: 15px; /* Border-radius */
+        text-align: center; /* Text-align center */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-shadow halus */
+    }
 
-        .profile-card p {
-            color:#64748b;
-            margin-bottom: 20px;
-        }
-        
-        .profile-card a:hover{
-            background:#1d4ed8;
-            transform: translateY(-2px);
+    /* Gaya untuk gambar profil */
+    .profile-card img {
+        width: 100px; /* Lebar gambar */
+        height: 100px; /* Tinggi gambar */
+        object-fit: cover; /* Object-fit cover */
+        border-radius: 50%; /* Lingkaran sempurna */
+        margin-bottom: 15px; /* Margin bawah untuk jarak dengan teks */
+    }
 
-        }
-    </style>
+    /* Gaya untuk link "Hubungi Saya" */
+    .profile-card a {
+        text-decoration: none; /* Hilangkan garis bawah pada link */
+        background-color: #007BFF; /* Warna background biru */
+        color: #ffffff; /* Warna teks putih */
+        padding: 10px 20px; /* Padding */
+        border-radius: 5px; /* Border-radius */
+        display: inline-block; /* Ubah display menjadi inline-block */
+        transition: background-color 0.3s ease; /* Transisi untuk efek hover */
+    }
+
+    /* Efek hover pada link "Hubungi Saya" */
+    .profile-card a:hover {
+        background-color: #0056b3; /* Warna sedikit berubah saat hover */
+    }
+</style>
+    
     <!-- 
     INSTRUKSI PENGERJAAN (TO-DO LIST):
     1. Tambahkan CSS reset dasar (margin: 0, padding: 0, box-sizing: border-box).
@@ -68,8 +71,8 @@
     7. Beri efek hover pada link <a> agar warnanya sedikit berubah saat kursor diarahkan.
     -->
     <div class="profile-card">
-        <img src="https://ui-avatars.com/api/?name=Budi+Santoso&size=150" alt="Foto Budi">
-        <h2>Budi Santoso</h2>
+        <img src="https://ui-avatars.com/api/?name=Hidayat&size=150" alt="Foto Hidayat">
+        <h2>Hidayat</h2>
         <p>Web Developer</p>
         <a href="#">Hubungi Saya</a>
     </div>

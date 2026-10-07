@@ -5,6 +5,32 @@
     <title>10 - Galeri Gambar - Sebelum</title>
 </head>
 <body>
+<style>
+    /* CSS reset dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Atur body agar konten berada di tengah layar */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0; /* Warna abu-abu terang */
+        font-family: Arial, sans-serif;
+    }
+
+    /* Gaya untuk galeri gambar */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+    }
+</style>
+
     <!-- 
     INSTRUKSI PENGERJAAN:
     1. Ubah class ".gallery" menjadi CSS Grid (grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))) dan beri gap.

@@ -5,6 +5,45 @@
     <title>05 - Pricing Table - Sebelum</title>
 </head>
 <body>
+
+<style>
+    /* CSS reset dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Atur body agar konten berada di tengah layar */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0; /* Warna abu-abu terang */
+        font-family: Arial, sans-serif;
+    }
+
+    .pricing-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .plan {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .plan.popular {
+        border-color: #ffcc00;
+        transform: scale(1.05);
+    }
+</style>
+
     <!-- 
     INSTRUKSI PENGERJAAN:
     1. Gunakan CSS Grid atau Flexbox pada ".pricing-container" untuk menyejajarkan 3 paket secara horizontal.

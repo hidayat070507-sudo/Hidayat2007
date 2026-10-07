@@ -5,6 +5,59 @@
     <title>04 - Kartu Produk - Sebelum</title>
 </head>
 <body>
+
+<style>
+    /* CSS reset dasar */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Atur body agar konten berada di tengah layar */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0; /* Warna abu-abu terang */
+        font-family: Arial, sans-serif;
+    }
+
+    /* Gaya untuk kartu produk */
+    .product-card {
+        width: 280px; /* Lebar sekitar 280px */
+        background-color: #ffffff; /* Background putih */
+        border-radius: 10px; /* Border-radius */
+        overflow: hidden; /* Agar gambar tidak keluar batas melengkung */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box-shadow halus */
+    }
+
+    .product-card img {
+        max-width: 100%; /* Gambar responsif */
+        display: block; /* Hilangkan margin bawah bawaan gambar */
+    }
+
+    .product-info {
+        padding: 15px; /* Padding pada area teks */
+    }
+
+    .price {
+        color: #ff4500; /* Warna merah/oranye untuk harga */
+        font-weight: bold; /* Font-weight tebal */
+        font-size: 1.2em; /* Ukuran lebih besar */
+    }
+
+    button {
+        width: 100%; /* Tombol lebar penuh */
+        background-color: #007BFF; /* Warna background biru */
+        color: #ffffff; /* Warna teks putih */
+        border: none; /* Hilangkan border default */
+        padding: 10px; /* Padding tombol */
+        cursor: pointer; /* Ubah cursor menjadi pointer saat hover */
+    }   
+</style>
+
     <!-- 
     INSTRUKSI PENGERJAAN:
     1. Bungkus konten ke dalam kartu dengan class ".product-card" berukuran lebar ~280px.
