@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>01 - Kartu Profil - Sebelum</title>
 </head>
 <body>
@@ -12,49 +13,48 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-        /* Atur body agar konten berada di tengah layar */
         body {
-            display: flex;
+            min-height: 100vh;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0; /* abu-abu terang */
+            background-color:#f1f5f9;
             font-family: Arial, sans-serif;
+            padding: 20px;
         }
 
-        /* Bungkus elemen di bawah ke dalam class ".profile-card" */
+         <!--profile-card-->
+
         .profile-card {
-            background-color: #ffffff; /* putih */
+            background: white;
             width: 300px;
             padding: 20px;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* box-shadow halus */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Atur gambar (img) */
         .profile-card img {
             width: 100px;
             height: 100px;
             object-fit: cover;
-            border-radius: 50%; /* lingkaran sempurna */
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        
+        .profile-card h2 {
+            margin-bottom: 8px;
+            color:#1e293b;
         }
 
-        /* Hilangkan garis bawah pada link <a> dan beri styling */
-        .profile-card a {
-            text-decoration: none; /* hilangkan garis bawah */
-            background-color: #007BFF; /* warna background */
-            color: #ffffff; /* warna teks */
-            padding: 10px 20px; /* padding */
-            border-radius: 5px; /* border-radius */
-            display: inline-block; /* ubah display menjadi inline-block */
-            transition: background-color 0.3s; /* efek transisi untuk hover */
+        .profile-card p {
+            color:#64748b;
+            margin-bottom: 20px;
         }
+        
+        .profile-card a:hover{
+            background:#1d4ed8;
+            transform: translateY(-2px);
 
-        /* Efek hover pada link <a> */
-        .profile-card a:hover {
-            background-color: #0056b3; /* warna berubah saat hover */
         }
     </style>
     <!-- 
