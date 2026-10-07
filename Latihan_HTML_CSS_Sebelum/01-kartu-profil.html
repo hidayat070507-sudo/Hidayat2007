@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>01 - Kartu Profil - Sebelum</title>
+</head>
+<body>
+    <style>
+        /* CSS reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Atur body agar konten berada di tengah layar */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0; /* abu-abu terang */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Bungkus elemen di bawah ke dalam class ".profile-card" */
+        .profile-card {
+            background-color: #ffffff; /* putih */
+            width: 300px;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* box-shadow halus */
+        }
+
+        /* Atur gambar (img) */
+        .profile-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%; /* lingkaran sempurna */
+        }
+
+        /* Hilangkan garis bawah pada link <a> dan beri styling */
+        .profile-card a {
+            text-decoration: none; /* hilangkan garis bawah */
+            background-color: #007BFF; /* warna background */
+            color: #ffffff; /* warna teks */
+            padding: 10px 20px; /* padding */
+            border-radius: 5px; /* border-radius */
+            display: inline-block; /* ubah display menjadi inline-block */
+            transition: background-color 0.3s; /* efek transisi untuk hover */
+        }
+
+        /* Efek hover pada link <a> */
+        .profile-card a:hover {
+            background-color: #0056b3; /* warna berubah saat hover */
+        }
+    </style>
+    <!-- 
+    INSTRUKSI PENGERJAAN (TO-DO LIST):
+    1. Tambahkan CSS reset dasar (margin: 0, padding: 0, box-sizing: border-box).
+    2. Atur body agar konten berada di tengah layar (gunakan Flexbox, min-height: 100vh, background warna abu-abu terang).
+    3. Bungkus elemen di bawah ke dalam class ".profile-card".
+    4. Beri ".profile-card" background putih, lebar sekitar 300px, padding, border-radius (misal 15px), text-align center, dan box-shadow halus.
+    5. Atur gambar (img) agar lebarnya misal 100px, height 100px, object-fit cover, dan border-radius 50% (lingkaran sempurna).
+    6. Hilangkan garis bawah pada link <a> (text-decoration: none), beri warna background, padding, border-radius, dan ubah display menjadi inline-block.
+    7. Beri efek hover pada link <a> agar warnanya sedikit berubah saat kursor diarahkan.
+    -->
+    <div class="profile-card">
+        <img src="https://ui-avatars.com/api/?name=Budi+Santoso&size=150" alt="Foto Budi">
+        <h2>Budi Santoso</h2>
+        <p>Web Developer</p>
+        <a href="#">Hubungi Saya</a>
+    </div>
+</body>
+</html>

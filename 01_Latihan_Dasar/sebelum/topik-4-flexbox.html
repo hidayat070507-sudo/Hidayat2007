@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Topik 4: Flexbox</title>
+    <style>
+        /* TUGAS 4:
+           Ubah .wadah menjadi Flexbox.
+           Posisikan kotak secara horizontal dengan jarak merata (space-around)
+           dan tengahkan secara vertikal (align-items).
+        */
+        .wadah {
+            height: 200px;
+            background-color: #e2e8f0;
+            
+            /* Tambahkan Flexbox di sini */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;   
+        }
+        .item { width: 50px; height: 50px; background: #3b82f6; color: white; text-align: center; line-height: 50px;}
+    </style>
+</head>
+<body>
+    <div class="wadah">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+</html>

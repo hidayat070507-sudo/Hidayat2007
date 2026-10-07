@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Topik 2: Selectors & Warna</title>
+    <style>
+        /* TUGAS 2:
+           1. Targetkan ID 'judul-utama' dan beri warna teks HEX #38BDF8.
+           2. Targetkan Class 'tombol' dan beri warna background HEX #2563EB dan warna teks putih.
+           3. Berikan efek ':hover' pada class 'tombol' dengan background warna orange.
+        */
+        #judul-utama {
+            color: #060505;
+        }
+        .tombol {
+            background-color: #2563EB;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer; 
+        }
+        .tombol:hover {
+            background-color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="judul-utama">Belajar CSS Selectors</h1>
+    <button class="tombol">Klik Saya</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Topik 5: CSS Grid (Selesai)</title>
+    <style>
+        .grid-wadah {
+            background-color: #f1f5f9;
+            padding: 20px;
+            
+            /* Penyelesaian */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        .grid-item { background: #10b981; color: white; padding: 20px; text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="grid-wadah">
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+        <div class="grid-item">D</div>
+        <div class="grid-item">E</div>
+        <div class="grid-item">F</div>
+    </div>
+</body>
+</html>

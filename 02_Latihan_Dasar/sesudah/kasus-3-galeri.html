@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus 3: Image Gallery Grid (Selesai)</title>
+    <style>
+        body { margin: 0; background-color: #0f172a; font-family: sans-serif; }
+        
+        .container {
+            padding: 20px;
+            display: grid;
+            /* Auto-fit & minmax: Jurus sihir grid untuk responsif otomatis */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+        }
+        
+        .item {
+            background-color: #334155;
+            border-radius: 8px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .item-lebar {
+            background-color: #2563eb;
+            grid-column: span 2; /* Memakan 2 petak horizontal */
+        }
+        
+        .item-tinggi {
+            background-color: #0ea5e9;
+            grid-row: span 2; /* Memakan 2 petak vertikal */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Biasa 1</div>
+        <div class="item item-lebar">Foto Jagoan Lebar</div>
+        <div class="item">Biasa 2</div>
+        <div class="item item-tinggi">Foto Jagoan Tinggi</div>
+        <div class="item">Biasa 3</div>
+        <div class="item">Biasa 4</div>
+        <div class="item">Biasa 5</div>
+    </div>
+</body>
+</html>

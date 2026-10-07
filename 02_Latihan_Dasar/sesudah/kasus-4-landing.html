@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <!-- FONDASI RESPONSIF: META VIEWPORT TAG WAJIB -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus 4: Responsive Landing Page (Selesai)</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; background-color: #111827; color: white; }
+        
+        .hero-container {
+            display: flex;
+            flex-direction: row; /* Berdampingan kiri-kanan pada Desktop */
+            align-items: center;
+            padding: 50px 10%;
+            min-height: 80vh;
+            gap: 40px;
+        }
+        
+        .hero-text { flex: 1; }
+        .hero-text h1 { font-size: 3em; margin-bottom: 10px; color: #38BDF8; line-height: 1.2;}
+        .hero-text p { color: #9CA3AF; line-height: 1.6; }
+        
+        .hero-image { flex: 1; text-align: center; }
+        .hero-image img { width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2); }
+        
+        .btn { padding: 15px 30px; background: #38BDF8; border:none; border-radius: 8px; color: #111; font-weight:bold; margin-top: 20px; cursor: pointer; }
+        
+        /* MEDIA QUERIES MAGIC (INJEKSI RESPONSIF MOBILE-BREAKPOINT) */
+        @media screen and (max-width: 768px) {
+            .hero-container {
+                flex-direction: column-reverse; /* Kolom direvers agar teks promosi di atas gambar */
+                align-items: center;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .hero-text h1 { font-size: 2.2em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-container">
+        <div class="hero-text">
+            <h1>JUDUL PROMOSI EPIK!</h1>
+            <p>Daftar sekarang untuk masa depan Anda. Pelajari keterampilan web development modern menggunakan HTML & CSS dari nol.</p>
+            <button class="btn">Mulai Belajar</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop" alt="Web Dev">
+        </div>
+    </div>
+</body>
+</html>

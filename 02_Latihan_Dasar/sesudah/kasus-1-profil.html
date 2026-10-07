@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus 1: Profil Card Sederhana (Selesai)</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: sans-serif; display: flex; justify-content: center; padding: 50px; background-color: #f4f7f6; }
+        
+        .kontener {
+            width: 300px;
+            padding: 24px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0, 0.1);
+            text-align: center;
+        }
+        
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        button {
+            background-color: #2965F1;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background-color: #1d4ed8;
+            cursor: pointer;
+            transform: translateY(-2px);
+            transition: all 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="kontener">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" alt="Avatar" class="avatar">
+        <h2>Sarah Chen</h2>
+        <p style="color: #666; font-size: 0.9em; margin-top: -10px;">Frontend Developer | Tech Educator</p>
+        <p style="font-size: 0.85em; margin-bottom: 20px;">Passionate about clean code and modern UI/UX.</p>
+        <button>Follow Sarah</button>
+    </div>
+</body>
+</html>

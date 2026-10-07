@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus 2: Merakit Navbar Web (Selesai)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: sans-serif; background-color: #f4f7f6;}
+        
+        .navbar-container {
+            background-color: #111827;
+            color: white;
+            padding: 15px 30px;
+            
+            /* MAGIC FLEXBOX */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .menu-list {
+            list-style: none; /* Hilangkan titik */
+            display: flex;
+            gap: 20px; /* Jarak antar menu */
+        }
+        
+        .menu-list li {
+            cursor: pointer;
+            color: #9CA3AF;
+        }
+        
+        .menu-list li:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar-container">
+        <div class="logo">
+            <strong>🛡️ BRANDLOGO</strong>
+        </div>
+        <ul class="menu-list">
+            <li style="color: #38BDF8;">Beranda</li>
+            <li>Tentang</li>
+            <li>Layanan</li>
+            <li>Kontak</li>
+        </ul>
+    </nav>
+</body>
+</html>

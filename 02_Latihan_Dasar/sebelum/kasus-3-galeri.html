@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Kasus 3: Image Gallery Grid</title>
+    <style>
+        /* TUGAS:
+           1. Ubah .container menggunakan CSS Grid.
+           2. Gunakan grid-template-columns dengan repeat(auto-fit, minmax(250px, 1fr)) dan gap 16px.
+           3. Buat .item-lebar memakan 2 kolom.
+           4. Buat .item-tinggi memakan 2 baris.
+        */
+        body { margin: 0; font-family: sans-serif; }   
+        .container {
+            padding: 20px;
+            display: grid;
+            background-color: #0f172a;
+            grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+        }
+        
+        .item {
+            background-color: #334155;
+            border-radius: 8px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .item-lebar {
+            background-color: #475569;
+            grid-column: span 2; /* Memakan 2 petak horizontal */  
+        }
+        
+        .item-tinggi {
+            background-color: #1e293b;
+            grid-row: span 2; /* Memakan 2 petak vertikal */   
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Biasa 1</div>
+        <div class="item item-lebar">Jagoan Lebar</div>
+        <div class="item">Biasa 2</div>
+        <div class="item item-tinggi">Jagoan Tinggi</div>
+        <div class="item">Biasa 3</div>
+        <div class="item">Biasa 4</div>
+        <div class="item">Biasa 5</div>
+    </div>
+</body>
+</html>
