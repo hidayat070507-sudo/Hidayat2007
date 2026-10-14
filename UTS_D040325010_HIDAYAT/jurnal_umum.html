@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Jurnal Umum - SIA</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f610;
+            color: #212529;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 230px;
+            background-color: #212529;
+            color: white;
+            padding: 25px 15px;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+        .sidebar h2 {
+            font-size: 21px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background-color: #0d6efd;
+        }
+
+        .logout {
+            margin-top: auto;
+            background-color: #dc3545;
+            text-align: center;
+        }
+
+        /* Konten */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            min-width: 0;
+        }
+
+        .header {
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #6c757d;
+        }
+
+        /* Formulir */
+        .form-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .form-card h2 {
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: white;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid #b6d4fe;
+            border-color: #0d6efd;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .amount-wrapper {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .amount-wrapper span {
+            padding: 11px;
+            background-color: #e9ecef;
+            font-weight: bold;
+        }
+
+        .amount-wrapper input {
+            border: none;
+            border-radius: 0;
+        }
+
+        .amount-wrapper input:focus {
+            outline: none;
+        }
+
+        /* Tombol */
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-save {
+            background-color: #0d6efd;
+        }
+
+        .btn-save:hover {
+            background-color: #084298;
+        }
+
+        .btn-cancel {
+            background-color: #6c757d;
+        }
+
+        .btn-cancel:hover {
+            background-color: #565e64;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+            padding: 7px 10px;
+        }
+
+        /* Tabel jurnal */
+        .table-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .table-card h2 {
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 850px;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: left;
+            font-size: 13px;
+        }
+
+        th {
+            background-color: #212529;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .debit {
+            color: #198754;
+            font-weight: bold;
+        }
+
+        .kredit {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .empty {
+            text-align: center;
+            color: #6c757d;
+        }
+
+        .total {
+            margin-top: 18px;
+            padding: 15px;
+            background-color: #e9f2ff;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-weight: bold;
+        }
+
+        @media (max-width: 750px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                min-height: auto;
+            }
+
+            .logout {
+                margin-top: 15px;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .header h1 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <h2>PT PRIMA AKUNTINDO</h2>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="jurnal.html" class="active">Jurnal Umum</a>
+        <a href="#buku-besar">Buku Besar</a>
+        <a href="#laba-rugi">Laba Rugi</a>
+        <a href="#neraca">Neraca</a>
+
+        <a href="login.html" class="logout">Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="header">
+            <h1>JURNAL UMUM</h1>
+            <p>PT Prima Akuntindo | Sistem Informasi Akuntansi</p>
+        </header>
+
+        <section class="form-card">
+            <h2>Formulir Transaksi</h2>
+
+            <form id="journalForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal Transaksi</label>
+                        <input
+                            type="date"
+                            id="tanggal"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bukti">No. Bukti</label>
+                        <input
+                            type="text"
+                            id="bukti"
+                            placeholder="Contoh: BK-001"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="keterangan">Keterangan</label>
+                        <textarea
+                            id="keterangan"
+                            placeholder="Masukkan keterangan transaksi"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="akun">Nama Akun</label>
+                        <select id="akun" required>
+                            <option value="">-- Pilih Nama Akun --</option>
+                            <optgroup label="Aset">
+                                <option>Kas</option>
+                                <option>Bank</option>
+                                <option>Piutang Usaha</option>
+                                <option>Persediaan Barang Dagang</option>
+                                <option>Perlengkapan</option>
+                                <option>Peralatan</option>
+                                <option>Kendaraan</option>
+                                <option>Gedung</option>
+                                <option>Akumulasi Penyusutan</option>
+                            </optgroup>
+                            <optgroup label="Kewajiban">
+                                <option>Utang Usaha</option>
+                                <option>Utang Gaji</option>
+                                <option>Utang Bank</option>
+                            </optgroup>
+                            <optgroup label="Ekuitas">
+                                <option>Modal Pemilik</option>
+                                <option>Prive</option>
+                            </optgroup>
+                            <optgroup label="Pendapatan">
+                                <option>Pendapatan Usaha</option>
+                                <option>Pendapatan Jasa</option>
+                                <option>Pendapatan Bunga</option>
+                            </optgroup>
+                            <optgroup label="Beban">
+                                <option>Beban Gaji</option>
+                                <option>Beban Sewa</option>
+                                <option>Beban Listrik</option>
+                                <option>Beban Air</option>
+                                <option>Beban Perlengkapan</option>
+                                <option>Beban Penyusutan</option>
+                                <option>Beban Lain-lain</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="posisi">Posisi Saldo</label>
+                        <select id="posisi" required>
+                            <option value="">-- Pilih Posisi --</option>
+                            <option value="Debit">Debit</option>
+                            <option value="Kredit">Kredit</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="nominal">Nominal</label>
+                        <div class="amount-wrapper">
+                            <span>Rp</span>
+                            <input
+                                type="number"
+                                id="nominal"
+                                placeholder="Masukkan nominal transaksi"
+                                min="1"
+                                step="1"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="buttons">
+                    <button type="submit" class="btn-save">
+                        Simpan Transaksi
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn-cancel"
+                        id="btnBatal"
+                    >
+                        Batal
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="table-card">
+            <h2>Daftar Transaksi Jurnal</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Tanggal</th>
+                            <th>No. Bukti</th>
+                            <th>Keterangan</th>
+                            <th>Nama Akun</th>
+                            <th>Posisi</th>
+                            <th>Nominal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="daftarJurnal">
+                        <tr>
+                            <td colspan="8" class="empty">
+                                Belum ada transaksi.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="total">
+                <span>Total Debit: <span id="totalDebit">Rp 0</span></span>
+                <span>Total Kredit: <span id="totalKredit">Rp 0</span></span>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const form = document.getElementById("journalForm");
+        const daftar = document.getElementById("daftarJurnal");
+        const tombolBatal = document.getElementById("btnBatal");
+
+        let transaksi = [];
+
+        const rupiah = (angka) =>
+            "Rp " + angka.toLocaleString("id-ID");
+
+        function tampilkanTransaksi() {
+            daftar.innerHTML = "";
+
+            if (transaksi.length === 0) {
+                daftar.innerHTML = `
+                    <tr>
+                        <td colspan="8" class="empty">
+                            Belum ada transaksi.
+                        </td>
+                    </tr>
+                `;
+            }
+
+            let debit = 0;
+            let kredit = 0;
+
+            transaksi.forEach((item, index) => {
+                if (item.posisi === "Debit") {
+                    debit += item.nominal;
+                } else {
+                    kredit += item.nominal;
+                }
+
+                const baris = document.createElement("tr");
+
+                const nilai = [
+                    index + 1,
+                    item.tanggal,
+                    item.bukti,
+                    item.keterangan,
+                    item.akun,
+                    item.posisi,
+                    rupiah(item.nominal)
+                ];
+
+                nilai.forEach((isi, kolom) => {
+                    const td = document.createElement("td");
+                    td.textContent = isi;
+
+                    if (kolom === 5) {
+                        td.className =
+                            item.posisi === "Debit"
+                                ? "debit"
+                                : "kredit";
+                    }
+
+                    baris.appendChild(td);
+                });
+
+                const aksi = document.createElement("td");
+                const hapus = document.createElement("button");
+
+                hapus.type = "button";
+                hapus.textContent = "Hapus";
+                hapus.className = "btn-delete";
+
+                hapus.addEventListener("click", () => {
+                    transaksi.splice(index, 1);
+                    tampilkanTransaksi();
+                });
+
+                aksi.appendChild(hapus);
+                baris.appendChild(aksi);
+                daftar.appendChild(baris);
+            });
+
+            document.getElementById("totalDebit").textContent =
+                rupiah(debit);
+
+            document.getElementById("totalKredit").textContent =
+                rupiah(kredit);
+        }
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const item = {
+                tanggal: document.getElementById("tanggal").value,
+                bukti: document.getElementById("bukti").value.trim(),
+                keterangan: document.getElementById("keterangan").value.trim(),
+                akun: document.getElementById("akun").value,
+                posisi: document.getElementById("posisi").value,
+                nominal: Number(document.getElementById("nominal").value)
+            };
+
+            if (item.nominal <= 0 || !Number.isFinite(item.nominal)) {
+                alert("Nominal harus lebih besar dari nol.");
+                return;
+            }
+
+            transaksi.push(item);
+            tampilkanTransaksi();
+
+            form.reset();
+            document.getElementById("tanggal").focus();
+
+            alert("Transaksi berhasil ditambahkan ke daftar jurnal.");
+        });
+
+        tombolBatal.addEventListener("click", function() {
+            form.reset();
+        });
+
+        // Mengisi tanggal hari ini secara otomatis
+        const hariIni = new Date();
+        const tahun = hariIni.getFullYear();
+        const bulan = String(hariIni.getMonth() + 1).padStart(2, "0");
+        const hari = String(hariIni.getDate()).padStart(2, "0");
+
+        document.getElementById("tanggal").value =
+            `${tahun}-${bulan}-${hari}`;
+    </script>
+
+</body>
+</html>
