@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | PT Prima Akuntindo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-page">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand sidebar-brand" href="dashboard.html"><span class="brand-mark">PA</span><span>PRIMA<span class="brand-thin"> AKUNTINDO</span></span></a>
+      <p class="sidebar-caption">MENU UTAMA</p>
+      <nav class="side-nav" aria-label="Navigasi utama">
+        <a class="nav-link active" href="dashboard.html"><span class="nav-icon">▦</span> Dashboard</a>
+        <a class="nav-link" href="jurnal_umum.html"><span class="nav-icon">≡</span> Jurnal Umum</a>
+        <a class="nav-link" href="laba_rugi.html"><span class="nav-icon">▤</span> Laporan Laba Rugi</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">?</span><div><strong>Perlu bantuan?</strong><small>Hubungi administrator sistem.</small></div></div>
+        <a class="nav-link logout-link" href="login.html"><span class="nav-icon">↪</span> Keluar Sistem</a>
+        <div class="sidebar-version">PRIMA ACCOUNTING <span>v1.0.0</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb">Halaman <span>/</span> <strong>Dashboard</strong></div>
+        <div class="profile-area"><div class="profile-avatar">AK</div><div class="profile-text"><strong>Admin Keuangan</strong><small>Administrator</small></div><span class="profile-chevron">⌄</span></div>
+      </header>
+
+      <section class="page-heading">
+        <div><p class="eyebrow blue-eyebrow">RINGKASAN KEUANGAN</p><h1>Dashboard</h1><p class="muted">Selamat datang kembali! Berikut ringkasan keuangan perusahaan.</p></div>
+        <div class="date-chip"><span>◷</span> Periode: Oktober 2026</div>
+      </section>
+
+      <section class="stats-grid" aria-label="Ringkasan saldo">
+        <article class="stat-card cash-card">
+          <div class="stat-top"><div><p class="stat-label">SALDO KAS</p><h2>Rp 85.750.000</h2></div><span class="stat-icon cash-icon">Rp</span></div>
+          <div class="stat-bottom"><span class="trend positive">↗ 8,2%</span><span>dari bulan lalu</span></div>
+          <div class="stat-decoration"></div>
+        </article>
+        <article class="stat-card receivable-card">
+          <div class="stat-top"><div><p class="stat-label">PIUTANG</p><h2>Rp 12.500.000</h2></div><span class="stat-icon receivable-icon">↗</span></div>
+          <div class="stat-bottom"><span class="trend neutral">● Aktif</span><span>total piutang berjalan</span></div>
+          <div class="stat-decoration"></div>
+        </article>
+        <article class="stat-card income-card">
+          <div class="stat-top"><div><p class="stat-label">PENDAPATAN</p><h2>Rp 42.800.000</h2></div><span class="stat-icon income-icon">＋</span></div>
+          <div class="stat-bottom"><span class="trend positive">↗ 5,4%</span><span>bulan ini</span></div>
+          <div class="stat-decoration"></div>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel activity-panel">
+          <div class="panel-heading"><div><h2>Aktivitas Terbaru</h2><p class="muted">Transaksi yang tercatat di sistem</p></div><a href="jurnal_umum.html" class="text-link">Lihat jurnal →</a></div>
+          <div class="table-scroll"><table class="data-table">
+            <thead><tr><th>TANGGAL</th><th>KETERANGAN</th><th>JENIS</th><th class="text-right">NOMINAL</th></tr></thead>
+            <tbody>
+              <tr><td>14 Okt 2026</td><td><div class="table-title">Penjualan produk</div><small>TRX-1026-018</small></td><td><span class="pill pill-green">Pemasukan</span></td><td class="text-right amount">Rp 4.500.000</td></tr>
+              <tr><td>13 Okt 2026</td><td><div class="table-title">Pembayaran listrik</div><small>TRX-1026-017</small></td><td><span class="pill pill-red">Pengeluaran</span></td><td class="text-right amount">Rp 750.000</td></tr>
+              <tr><td>12 Okt 2026</td><td><div class="table-title">Penerimaan piutang</div><small>TRX-1026-016</small></td><td><span class="pill pill-green">Pemasukan</span></td><td class="text-right amount">Rp 2.000.000</td></tr>
+              <tr><td>11 Okt 2026</td><td><div class="table-title">Pembelian perlengkapan</div><small>TRX-1026-015</small></td><td><span class="pill pill-red">Pengeluaran</span></td><td class="text-right amount">Rp 350.000</td></tr>
+            </tbody>
+          </table></div>
+        </article>
+        <article class="panel quick-panel">
+          <div class="panel-heading"><div><h2>Akses Cepat</h2><p class="muted">Pilih aktivitas Anda</p></div></div>
+          <a class="quick-link" href="jurnal_umum.html"><span class="quick-icon quick-blue">＋</span><span><strong>Input Jurnal Umum</strong><small>Catat transaksi baru</small></span><b>→</b></a>
+          <a class="quick-link" href="laba_rugi.html"><span class="quick-icon quick-purple">▤</span><span><strong>Lihat Laporan</strong><small>Ringkasan laba dan rugi</small></span><b>→</b></a>
+          <div class="notice-box"><span>✦</span><div><strong>Tips hari ini</strong><p>Pastikan setiap transaksi memiliki bukti yang lengkap sebelum dicatat.</p></div></div>
+        </article>
+      </section>
+      <footer class="app-footer">© 2026 PT Prima Akuntindo <span>•</span> Dibuat untuk pengelolaan keuangan yang lebih baik.</footer>
+    </main>
+  </div>
+</body>
+</html>

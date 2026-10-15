@@ -1,0 +1,753 @@
+<!--From_Login-->
+<style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f610;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-card {
+            width: 350px;
+            background-color: white;
+            padding: 25px;
+            border: 1px solid #0d6efd;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 23px;
+            margin-bottom: 5px;
+            color: #212529;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #6c8aa5;
+            border-radius: 5px;
+            outline-color: #0d6efd;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0d6efd;
+        }
+</style>
+
+<!--Dashboard-->
+     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f610;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            min-height: 100vh;
+            background-color: #212529;
+            color: white;
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 10px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #0d6efd;
+        }
+
+        .logout {
+            margin-top: auto;
+            text-align: center;
+            background-color: #dc3545;
+        }
+
+        /* Konten utama */
+        .main-content {
+            flex: 1;
+            padding: 35px;
+        }
+
+        .main-content h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #212529;
+        }
+
+        .welcome {
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        /* Kartu keuangan */
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 250px;
+            padding: 25px 15px;
+            background-color: white;
+            border: 1px solid #8aa6c1;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+            text-align: center;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #343a40;
+        }
+
+        .card p {
+            font-size: 23px;
+            font-weight: bold;
+            color: #212529;
+        }
+
+        /* Tampilan HP */
+        @media (max-width: 650px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                min-height: auto;
+            }
+
+            .logout {
+                margin-top: 15px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <!--Jurnal-->
+     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f610;
+            color: #212529;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 230px;
+            background-color: #212529;
+            color: white;
+            padding: 25px 15px;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+
+        .sidebar h2 {
+            font-size: 21px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background-color: #0d6efd;
+        }
+
+        .logout {
+            margin-top: auto;
+            background-color: #dc3545;
+            text-align: center;
+        }
+
+        /* Konten */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            min-width: 0;
+        }
+
+        .header {
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #6c757d;
+        }
+
+        /* Formulir */
+        .form-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .form-card h2 {
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: white;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 2px solid #b6d4fe;
+            border-color: #0d6efd;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .amount-wrapper {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .amount-wrapper span {
+            padding: 11px;
+            background-color: #e9ecef;
+            font-weight: bold;
+        }
+
+        .amount-wrapper input {
+            border: none;
+            border-radius: 0;
+        }
+
+        .amount-wrapper input:focus {
+            outline: none;
+        }
+
+        /* Tombol */
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-save {
+            background-color: #0d6efd;
+        }
+
+        .btn-save:hover {
+            background-color: #084298;
+        }
+
+        .btn-cancel {
+            background-color: #6c757d;
+        }
+
+        .btn-cancel:hover {
+            background-color: #565e64;
+        }
+
+        .btn-delete {
+            background-color: #dc3545;
+            padding: 7px 10px;
+        }
+
+        /* Tabel jurnal */
+        .table-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .table-card h2 {
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 850px;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: left;
+            font-size: 13px;
+        }
+
+        th {
+            background-color: #212529;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .debit {
+            color: #198754;
+            font-weight: bold;
+        }
+
+        .kredit {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .empty {
+            text-align: center;
+            color: #6c757d;
+        }
+
+        .total {
+            margin-top: 18px;
+            padding: 15px;
+            background-color: #e9f2ff;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-weight: bold;
+        }
+
+        @media (max-width: 750px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                min-height: auto;
+            }
+
+            .logout {
+                margin-top: 15px;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .header h1 {
+                font-size: 23px;
+            }
+        }
+    </style>
+    <script>
+        const form = document.getElementById("journalForm");
+        const daftar = document.getElementById("daftarJurnal");
+        const tombolBatal = document.getElementById("btnBatal");
+
+        let transaksi = [];
+
+        const rupiah = (angka) =>
+            "Rp " + angka.toLocaleString("id-ID");
+
+        function tampilkanTransaksi() {
+            daftar.innerHTML = "";
+
+            if (transaksi.length === 0) {
+                daftar.innerHTML = `
+                    <tr>
+                        <td colspan="8" class="empty">
+                            Belum ada transaksi.
+                        </td>
+                    </tr>
+                `;
+            }
+
+            let debit = 0;
+            let kredit = 0;
+
+            transaksi.forEach((item, index) => {
+                if (item.posisi === "Debit") {
+                    debit += item.nominal;
+                } else {
+                    kredit += item.nominal;
+                }
+
+                const baris = document.createElement("tr");
+
+                const nilai = [
+                    index + 1,
+                    item.tanggal,
+                    item.bukti,
+                    item.keterangan,
+                    item.akun,
+                    item.posisi,
+                    rupiah(item.nominal)
+                ];
+
+                nilai.forEach((isi, kolom) => {
+                    const td = document.createElement("td");
+                    td.textContent = isi;
+
+                    if (kolom === 5) {
+                        td.className =
+                            item.posisi === "Debit"
+                                ? "debit"
+                                : "kredit";
+                    }
+
+                    baris.appendChild(td);
+                });
+
+                const aksi = document.createElement("td");
+                const hapus = document.createElement("button");
+
+                hapus.type = "button";
+                hapus.textContent = "Hapus";
+                hapus.className = "btn-delete";
+
+                hapus.addEventListener("click", () => {
+                    transaksi.splice(index, 1);
+                    tampilkanTransaksi();
+                });
+
+                aksi.appendChild(hapus);
+                baris.appendChild(aksi);
+                daftar.appendChild(baris);
+            });
+
+            document.getElementById("totalDebit").textContent =
+                rupiah(debit);
+
+            document.getElementById("totalKredit").textContent =
+                rupiah(kredit);
+        }
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const item = {
+                tanggal: document.getElementById("tanggal").value,
+                bukti: document.getElementById("bukti").value.trim(),
+                keterangan: document.getElementById("keterangan").value.trim(),
+                akun: document.getElementById("akun").value,
+                posisi: document.getElementById("posisi").value,
+                nominal: Number(document.getElementById("nominal").value)
+            };
+
+            if (item.nominal <= 0 || !Number.isFinite(item.nominal)) {
+                alert("Nominal harus lebih besar dari nol.");
+                return;
+            }
+
+            transaksi.push(item);
+            tampilkanTransaksi();
+
+            form.reset();
+            document.getElementById("tanggal").focus();
+
+            alert("Transaksi berhasil ditambahkan ke daftar jurnal.");
+        });
+
+        tombolBatal.addEventListener("click", function() {
+            form.reset();
+            document.getElementById("tanggal").focus();
+        });
+
+        // Mengisi tanggal hari ini secara otomatis
+        const hariIni = new Date();
+        const tahun = hariIni.getFullYear();
+        const bulan = String(hariIni.getMonth() + 1).padStart(2, "0");
+        const hari = String(hariIni.getDate()).padStart(2, "0");
+
+        document.getElementById("tanggal").value =
+            `${tahun}-${bulan}-${hari}`;
+    </script>
+
+    <!--Laba Rugi-->
+        <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f610;
+            color: #212529;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        /* Kotak laporan */
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border: 1px solid #607d8b;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Judul laporan */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h2 {
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+
+        .header p {
+            font-size: 14px;
+            margin-top: 3px;
+        }
+
+        /* Tabel laporan */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #607d8b;
+            padding: 8px 10px;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #495057;
+            color: white;
+            text-align: center;
+        }
+
+        /* Warna baris tabel */
+        tbody tr:nth-child(even) {
+            background-color: #f1f3f5;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        /* Kolom nominal rata kanan */
+        .nominal {
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        /* Total laba bersih */
+        .total td {
+            background-color: #d9e2ec;
+            font-weight: bold;
+            border-top: 2px solid #495057;
+        }
+
+        .total-label {
+            text-align: right;
+        }
+
+        /* Tombol cetak */
+        .actions {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .btn-print {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 18px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-print:hover {
+            background-color: #084298;
+        }
+
+        /* Tampilan HP */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                margin: 20px auto;
+                padding: 12px;
+                overflow-x: auto;
+            }
+
+            th,
+            td {
+                padding: 7px;
+                font-size: 12px;
+            }
+        }
+
+        /* Pengaturan saat dicetak */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+
+            .container {
+                margin: 0 auto;
+                box-shadow: none;
+            }
+
+            .actions {
+                display: none;
+            }
+        }
+    </style>

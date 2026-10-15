@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jurnal Umum | PT Prima Akuntindo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-page">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand sidebar-brand" href="dashboard.html"><span class="brand-mark">PA</span><span>PRIMA<span class="brand-thin"> AKUNTINDO</span></span></a>
+      <p class="sidebar-caption">MENU UTAMA</p>
+      <nav class="side-nav" aria-label="Navigasi utama">
+        <a class="nav-link" href="dashboard.html"><span class="nav-icon">▦</span> Dashboard</a>
+        <a class="nav-link active" href="jurnal_umum.html"><span class="nav-icon">≡</span> Jurnal Umum</a>
+        <a class="nav-link" href="laba_rugi.html"><span class="nav-icon">▤</span> Laporan Laba Rugi</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">?</span><div><strong>Perlu bantuan?</strong><small>Hubungi administrator sistem.</small></div></div>
+        <a class="nav-link logout-link" href="login.html"><span class="nav-icon">↪</span> Keluar Sistem</a>
+        <div class="sidebar-version">PRIMA ACCOUNTING <span>v1.0.0</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="breadcrumb">Halaman <span>/</span> <strong>Jurnal Umum</strong></div><div class="profile-area"><div class="profile-avatar">AK</div><div class="profile-text"><strong>Admin Keuangan</strong><small>Administrator</small></div><span class="profile-chevron">⌄</span></div></header>
+      <section class="page-heading">
+        <div><p class="eyebrow blue-eyebrow">PENCATATAN TRANSAKSI</p><h1>Input Jurnal Umum</h1><p class="muted">Catat transaksi perusahaan dengan teliti dan sesuai bukti transaksi.</p></div>
+        <a class="btn btn-outline" href="dashboard.html">← Kembali ke Dashboard</a>
+      </section>
+
+      <section class="panel form-panel">
+        <div class="panel-heading form-panel-heading"><div class="heading-with-icon"><span class="heading-icon">≡</span><div><h2>Formulir Jurnal</h2><p class="muted">Lengkapi semua informasi transaksi di bawah ini.</p></div></div><span class="required-note"><span>*</span> Wajib diisi</span></div>
+        <form action="#" method="get" class="journal-form">
+          <div class="form-section-title"><span>01</span> Informasi Transaksi</div>
+          <div class="form-row"><label for="tanggal">Tanggal Transaksi <em>*</em></label><div class="field-control"><input type="date" id="tanggal" name="tanggal" required><small>Pilih tanggal sesuai bukti transaksi.</small></div></div>
+          <div class="form-row"><label for="nomor-bukti">Nomor Bukti</label><div class="field-control"><input type="text" id="nomor-bukti" name="nomor_bukti" placeholder="Contoh: TRX-2026-001"><small>Gunakan nomor bukti yang unik.</small></div></div>
+          <div class="form-row"><label for="keterangan">Keterangan <em>*</em></label><div class="field-control"><textarea id="keterangan" name="keterangan" rows="3" placeholder="Jelaskan transaksi secara singkat dan jelas..." required></textarea></div></div>
+
+          <div class="form-section-title second-section"><span>02</span> Detail Akun &amp; Nominal</div>
+          <div class="form-row"><label for="akun">Nama Akun <em>*</em></label><div class="field-control"><select id="akun" name="akun" required><option value="">-- Pilih Nama Akun --</option><option>Kas</option><option>Bank</option><option>Piutang Usaha</option><option>Persediaan</option><option>Peralatan</option><option>Utang Usaha</option><option>Modal</option><option>Pendapatan Usaha</option><option>Beban Gaji</option><option>Beban Listrik</option><option>Beban Perlengkapan</option></select></div></div>
+          <div class="form-row"><label>Posisi Saldo <em>*</em></label><div class="field-control radio-control"><label class="radio-card"><input type="radio" name="posisi" value="debit" required><span class="radio-dot"></span><span><strong>Debit</strong><small>Kolom debit</small></span></label><label class="radio-card"><input type="radio" name="posisi" value="kredit"><span class="radio-dot"></span><span><strong>Kredit</strong><small>Kolom kredit</small></span></label></div></div>
+          <div class="form-row"><label for="nominal">Nominal (Rp) <em>*</em></label><div class="field-control money-field"><span>Rp</span><input type="number" id="nominal" name="nominal" min="0" step="1" placeholder="0" required><small>Masukkan angka tanpa titik atau simbol mata uang.</small></div></div>
+          <div class="form-actions"><p><span>ⓘ</span> Periksa kembali data sebelum menyimpan.</p><div><button class="btn btn-outline" type="reset">Reset Form</button><button class="btn btn-primary" type="submit">Simpan Jurnal <span>→</span></button></div></div>
+        </form>
+      </section>
+      <footer class="app-footer">© 2026 PT Prima Akuntindo <span>•</span> Sistem Informasi Akuntansi</footer>
+    </main>
+  </div>
+</body>
+</html>

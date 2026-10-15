@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan Laba Rugi | PT Prima Akuntindo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app-page">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand sidebar-brand" href="dashboard.html"><span class="brand-mark">PA</span><span>PRIMA<span class="brand-thin"> AKUNTINDO</span></span></a>
+      <p class="sidebar-caption">MENU UTAMA</p>
+      <nav class="side-nav" aria-label="Navigasi utama">
+        <a class="nav-link" href="dashboard.html"><span class="nav-icon">▦</span> Dashboard</a>
+        <a class="nav-link" href="jurnal_umum.html"><span class="nav-icon">≡</span> Jurnal Umum</a>
+        <a class="nav-link active" href="laba_rugi.html"><span class="nav-icon">▤</span> Laporan Laba Rugi</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">?</span><div><strong>Perlu bantuan?</strong><small>Hubungi administrator sistem.</small></div></div>
+        <a class="nav-link logout-link" href="login.html"><span class="nav-icon">↪</span> Keluar Sistem</a>
+        <div class="sidebar-version">PRIMA ACCOUNTING <span>v1.0.0</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="breadcrumb">Halaman <span>/</span> <strong>Laporan Laba Rugi</strong></div><div class="profile-area"><div class="profile-avatar">AK</div><div class="profile-text"><strong>Admin Keuangan</strong><small>Administrator</small></div><span class="profile-chevron">⌄</span></div></header>
+      <section class="page-heading">
+        <div><p class="eyebrow blue-eyebrow">LAPORAN KEUANGAN</p><h1>Laporan Laba Rugi</h1><p class="muted">Informasi pendapatan dan beban perusahaan dalam satu periode.</p></div>
+        <button class="btn btn-outline" type="button" onclick="window.print()">⤓ Cetak Laporan</button>
+      </section>
+
+      <section class="report-summary">
+        <div class="report-company"><div class="report-logo">PA</div><div><h2>PT PRIMA AKUNTINDO</h2><p>Laporan keuangan internal perusahaan</p></div></div>
+        <div class="report-period"><span>PERIODE LAPORAN</span><strong>1 – 31 Oktober 2026</strong><small>Dalam Rupiah (IDR)</small></div>
+      </section>
+
+      <section class="panel report-panel">
+        <div class="panel-heading"><div><h2>Rincian Laba Rugi</h2><p class="muted">Periode yang berakhir 31 Oktober 2026</p></div><span class="report-status"><span></span> Laporan Ringkasan</span></div>
+        <div class="table-scroll"><table class="report-table">
+          <thead><tr><th style="width:68%">KETERANGAN</th><th class="text-right">JUMLAH (Rp)</th></tr></thead>
+          <tbody>
+            <tr class="section-row"><td colspan="2">PENDAPATAN</td></tr>
+            <tr><td class="indent">Pendapatan Usaha</td><td class="numeric">42.800.000</td></tr>
+            <tr><td class="indent">Pendapatan Lain-lain</td><td class="numeric">1.200.000</td></tr>
+            <tr class="subtotal"><td>Total Pendapatan</td><td class="numeric">44.000.000</td></tr>
+            <tr class="section-row"><td colspan="2">BEBAN OPERASIONAL</td></tr>
+            <tr><td class="indent">Beban Gaji</td><td class="numeric">12.000.000</td></tr>
+            <tr><td class="indent">Beban Sewa</td><td class="numeric">4.000.000</td></tr>
+            <tr><td class="indent">Beban Listrik dan Air</td><td class="numeric">750.000</td></tr>
+            <tr><td class="indent">Beban Perlengkapan</td><td class="numeric">350.000</td></tr>
+            <tr><td class="indent">Beban Penyusutan</td><td class="numeric">900.000</td></tr>
+            <tr class="subtotal"><td>Total Beban Operasional</td><td class="numeric">18.000.000</td></tr>
+            <tr class="net-income"><td><span>Total Laba Bersih</span><small>Pendapatan dikurangi total beban</small></td><td class="numeric">26.000.000</td></tr>
+          </tbody>
+        </table></div>
+        <div class="report-footnote"><span>ⓘ</span> Angka pada laporan ini merupakan data contoh untuk keperluan latihan.</div>
+      </section>
+      <footer class="app-footer">© 2026 PT Prima Akuntindo <span>•</span> Sistem Informasi Akuntansi</footer>
+    </main>
+  </div>
+</body>
+</html>
