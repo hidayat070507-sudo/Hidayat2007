@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Jurnal Umum - PT Prima Akuntindo</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>FORM INPUT JURNAL UMUM</h2>
+        <form>
+            <div class="form-row">
+                <label>Tanggal Transaksi</label>
+                <div class="input-field">
+                    <input type="date" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <label>No. Bukti</label>
+                <div class="input-field">
+                    <input type="text" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <label>Keterangan</label>
+                <div class="input-field">
+                    <textarea rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <label>Nama Akun</label>
+                <div class="input-field">
+                    <select>
+                        <option value="">-- Pilih Akun --</option>
+                        <option value="4101">4101 - Pendapatan Jasa</option>
+                        <option value="5101">5101 - Beban Gaji Karyawan</option>
+                        <option value="5102">5102 - Beban Sewa Gedung</option>
+                        <option value="5103">5103 - Beban Perlengkapan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <label>Posisi Saldo</label>
+                <div class="input-field radio-group">
+                    <label><input type="radio" name="posisi_saldo" value="debit"> Debit</label>
+                    <label><input type="radio" name="posisi_saldo" value="kredit"> Kredit</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <label>Nominal (Rp)</label>
+                <div class="input-field">
+                    <input type="number" required>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">[ SIMPAN TRANSAKSI ]</button>
+                <button type="reset" class="btn-cancel">[ BATAL ]</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

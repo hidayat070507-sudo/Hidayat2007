@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Portal belajar Pemrograman Web Hidayat.">
+  <title>Hidayat — Web Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navigasi utama">
+      <a href="#beranda" class="brand"><span class="brand-logo">H<span>.</span></span><span class="brand-name">hidayat<span>dev</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="navLinks">
+        <a class="nav-link active" href="#beranda">Beranda</a><a class="nav-link" href="#pertemuan">Pertemuan</a><a class="nav-link" href="#latihan">Latihan HTML &amp; CSS</a><a class="nav-link" href="#tentang">Tentang</a>
+      </div>
+      <a class="nav-cta" href="#pertemuan">Mulai Belajar <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="beranda">
+      <div class="hero-copy reveal">
+        <div class="availability"><span class="pulse-dot"></span> DIGITAL LEARNING SPACE <span class="availability-line"></span></div>
+        <p class="hero-kicker">HALO, SELAMAT DATANG 👋</p>
+        <h1>Belajar web,<br>bangun <span class="gradient-text">sesuatu.</span></h1>
+        <p class="hero-description">Satu tempat untuk merapikan semua materi Pemrograman Web, mulai dari HTML dasar, CSS, layout responsif, sampai latihan membangun antarmuka modern.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#pertemuan">Jelajahi Materi <span>↓</span></a><a class="button button-quiet" href="#latihan"><span class="play-icon">▷</span> Lihat latihan</a></div>
+        <div class="hero-meta"><div class="avatar-stack"><span>H</span><span>&lt;/&gt;</span><span>CSS</span></div><div><strong>Belajar selangkah demi selangkah</strong><small>Catatan, materi, dan latihan dalam satu halaman.</small></div></div>
+      </div>
+      <div class="hero-visual reveal reveal-delay">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="code-window">
+          <div class="window-top"><div class="window-dots"><i></i><i></i><i></i></div><span>index.html</span><span class="window-lock">⌁</span></div>
+          <div class="code-content">
+            <div class="code-line"><span class="line-no">01</span><code><span class="code-purple">&lt;main</span> <span class="code-green">class</span>=<span class="code-orange">"future"</span><span class="code-purple">&gt;</span></code></div>
+            <div class="code-line"><span class="line-no">02</span><code>&nbsp;&nbsp;<span class="code-purple">&lt;h1&gt;</span>Hello, world!<span class="code-purple">&lt;/h1&gt;</span></code></div>
+            <div class="code-line"><span class="line-no">03</span><code>&nbsp;&nbsp;<span class="code-purple">&lt;p&gt;</span>Keep learning.<span class="code-purple">&lt;/p&gt;</span></code></div>
+            <div class="code-line"><span class="line-no">04</span><code><span class="code-purple">&lt;/main&gt;</span></code></div>
+            <div class="code-line"><span class="line-no">05</span><code></code></div>
+            <div class="code-line"><span class="line-no">06</span><code><span class="code-blue">const</span> goal = <span class="code-orange">"build something great"</span>;</code></div>
+            <div class="code-line"><span class="line-no">07</span><code><span class="code-blue">while</span> (learning) {</code></div>
+            <div class="code-line"><span class="line-no">08</span><code>&nbsp;&nbsp;practice(); <span class="code-comment">// repeat</span></code></div>
+            <div class="code-line"><span class="line-no">09</span><code>}</code></div>
+          </div>
+          <div class="window-status"><span><i></i> All systems ready</span><span>UTF-8 · HTML</span></div>
+        </div>
+        <div class="floating-card floating-top"><span class="float-icon blue-icon">✦</span><div><strong>Keep creating</strong><small>One line at a time</small></div></div>
+        <div class="floating-card floating-bottom"><span class="float-icon green-icon">✓</span><div><strong>Progress mode</strong><small>Learn · Practice · Repeat</small></div></div>
+        <div class="hero-spark spark-one">✳</div><div class="hero-spark spark-two">✦</div>
+      </div>
+    </section>
+
+    <section class="quick-stats container reveal" aria-label="Ringkasan materi">
+      <div class="stat-item"><span class="stat-number">16</span><span class="stat-label">Pertemuan tersedia</span></div><div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-number">10</span><span class="stat-label">Latihan HTML &amp; CSS</span></div><div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-number">06</span><span class="stat-label">Topik dasar CSS</span></div>
+      <div class="stat-note"><span>↗</span> Terus berkembang, satu materi setiap waktu.</div>
+    </section>
+
+    <section class="learning-section container" id="pertemuan">
+      <div class="section-heading reveal"><div><p class="section-eyebrow">LEARNING LIBRARY</p><h2>Jelajahi <span class="gradient-text">materi.</span></h2><p class="section-description">Pilih pertemuan yang ingin kamu pelajari. Tautan mengikuti file dan folder yang sudah kamu punya.</p></div><div class="section-badge"><span class="badge-dot"></span> 16 materi</div></div>
+      <div class="toolbar reveal">
+        <label class="search-box"><span>⌕</span><input type="search" id="lessonSearch" placeholder="Cari pertemuan..." aria-label="Cari pertemuan"><kbd>⌕</kbd></label>
+        <div class="filter-group" role="group" aria-label="Filter materi"><button class="filter-button selected" data-filter="all">Semua</button><button class="filter-button" data-filter="awal">Dasar</button><button class="filter-button" data-filter="lanjut">Lanjutan</button></div>
+      </div>
+      <div class="lesson-grid" id="lessonGrid">
+        <a class="lesson-card featured-lesson" data-category="awal" data-title="pertemuan 1 html dasar" href="./Pertemuan1.html"><div class="lesson-card-top"><span class="lesson-icon icon-html">&lt;/&gt;</span><span class="lesson-number">LESSON 01</span><span class="card-arrow">↗</span></div><h3>Pertemuan 1</h3><p>Mulai dari dasar pemrograman web.</p><div class="lesson-bottom"><span class="tag tag-html">HTML</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="awal" data-title="pertemuan 2" href="./Pertemuan2.html"><div class="lesson-card-top"><span class="lesson-icon icon-css">✳</span><span class="lesson-number">LESSON 02</span><span class="card-arrow">↗</span></div><h3>Pertemuan 2</h3><p>Lanjutkan materi dan praktik dasar.</p><div class="lesson-bottom"><span class="tag tag-css">PRAKTIK</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="awal" data-title="pertemuan 3 standar" href="./Standar/index.html"><div class="lesson-card-top"><span class="lesson-icon icon-layout">▦</span><span class="lesson-number">LESSON 03</span><span class="card-arrow">↗</span></div><h3>Pertemuan 3</h3><p>Materi standar dan struktur halaman.</p><div class="lesson-bottom"><span class="tag tag-layout">LAYOUT</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="awal" data-title="pertemuan 4" href="./Pertemuan4.html"><div class="lesson-card-top"><span class="lesson-icon icon-code">{ }</span><span class="lesson-number">LESSON 04</span><span class="card-arrow">↗</span></div><h3>Pertemuan 4</h3><p>Perkuat pemahaman dengan contoh.</p><div class="lesson-bottom"><span class="tag tag-code">KONSEP</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="awal" data-title="pertemuan 5" href="./Pertemuan5.html"><div class="lesson-card-top"><span class="lesson-icon icon-css">✳</span><span class="lesson-number">LESSON 05</span><span class="card-arrow">↗</span></div><h3>Pertemuan 5</h3><p>Persiapkan dasar untuk latihan CSS.</p><div class="lesson-bottom"><span class="tag tag-css">CSS</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="awal" data-title="pertemuan 6 css" href="./Pertemuan6.html"><div class="lesson-card-top"><span class="lesson-icon icon-layout">▤</span><span class="lesson-number">LESSON 06</span><span class="card-arrow">↗</span></div><h3>Pertemuan 6</h3><p>Selector, warna, box model, dan layout.</p><div class="lesson-bottom"><span class="tag tag-layout">CSS DASAR</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="lanjut" data-title="pertemuan 7" href="./Pertemuan7.html"><div class="lesson-card-top"><span class="lesson-icon icon-code">{ }</span><span class="lesson-number">LESSON 07</span><span class="card-arrow">↗</span></div><h3>Pertemuan 7</h3><p>Teruskan perjalanan belajar web.</p><div class="lesson-bottom"><span class="tag tag-code">PRAKTIK</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="lanjut" data-title="pertemuan 8" href="./Pertemuan8.html"><div class="lesson-card-top"><span class="lesson-icon icon-html">&lt;/&gt;</span><span class="lesson-number">LESSON 08</span><span class="card-arrow">↗</span></div><h3>Pertemuan 8</h3><p>Bangun pemahaman dari latihan sebelumnya.</p><div class="lesson-bottom"><span class="tag tag-html">HTML</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="lanjut" data-title="pertemuan 9" href="./Pertemuan9.html"><div class="lesson-card-top"><span class="lesson-icon icon-css">✳</span><span class="lesson-number">LESSON 09</span><span class="card-arrow">↗</span></div><h3>Pertemuan 9</h3><p>Eksplorasi teknik styling halaman.</p><div class="lesson-bottom"><span class="tag tag-css">CSS</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="lanjut" data-title="pertemuan 10" href="./Pertemuan10.html"><div class="lesson-card-top"><span class="lesson-icon icon-layout">▦</span><span class="lesson-number">LESSON 10</span><span class="card-arrow">↗</span></div><h3>Pertemuan 10</h3><p>Susun komponen halaman dengan rapi.</p><div class="lesson-bottom"><span class="tag tag-layout">LAYOUT</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="lanjut" data-title="pertemuan 11" href="./Pertemuan11.html"><div class="lesson-card-top"><span class="lesson-icon icon-code">{ }</span><span class="lesson-number">LESSON 11</span><span class="card-arrow">↗</span></div><h3>Pertemuan 11</h3><p>Latihan lanjutan untuk membangun web.</p><div class="lesson-bottom"><span class="tag tag-code">PRAKTIK</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="lanjut" data-title="pertemuan 12" href="./Pertemuan12.html"><div class="lesson-card-top"><span class="lesson-icon icon-html">&lt;/&gt;</span><span class="lesson-number">LESSON 12</span><span class="card-arrow">↗</span></div><h3>Pertemuan 12</h3><p>Perluas keterampilan pemrograman web.</p><div class="lesson-bottom"><span class="tag tag-html">HTML</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="lanjut" data-title="pertemuan 13" href="./Pertemuan13.html"><div class="lesson-card-top"><span class="lesson-icon icon-css">✳</span><span class="lesson-number">LESSON 13</span><span class="card-arrow">↗</span></div><h3>Pertemuan 13</h3><p>Latih konsistensi struktur dan desain.</p><div class="lesson-bottom"><span class="tag tag-css">CSS</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="lanjut" data-title="pertemuan 14" href="./Pertemuan14.html"><div class="lesson-card-top"><span class="lesson-icon icon-layout">▤</span><span class="lesson-number">LESSON 14</span><span class="card-arrow">↗</span></div><h3>Pertemuan 14</h3><p>Rapikan komponen dan tampilan responsif.</p><div class="lesson-bottom"><span class="tag tag-layout">RESPONSIF</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="lanjut" data-title="pertemuan 15" href="./Pertemuan15.html"><div class="lesson-card-top"><span class="lesson-icon icon-code">{ }</span><span class="lesson-number">LESSON 15</span><span class="card-arrow">↗</span></div><h3>Pertemuan 15</h3><p>Siapkan hasil latihan menuju proyek.</p><div class="lesson-bottom"><span class="tag tag-code">PROYEK</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+        <a class="lesson-card" data-category="lanjut" data-title="pertemuan 16" href="./Pertemuan16.html"><div class="lesson-card-top"><span class="lesson-icon icon-html">&lt;/&gt;</span><span class="lesson-number">LESSON 16</span><span class="card-arrow">↗</span></div><h3>Pertemuan 16</h3><p>Lanjutkan progres dan tinjau pembelajaran.</p><div class="lesson-bottom"><span class="tag tag-html">REVIEW</span><span class="open-label">Buka materi <b>→</b></span></div></a>
+      </div>
+      <div class="empty-state" id="emptyState" hidden>Materi tidak ditemukan. Coba kata kunci lain.</div>
+    </section>
+
+    <section class="practice-section" id="latihan"><div class="container">
+      <div class="section-heading reveal"><div><p class="section-eyebrow">PRACTICE MAKES PROGRESS</p><h2>Waktunya <span class="gradient-text">praktik.</span></h2><p class="section-description">Kumpulan latihan untuk memahami elemen HTML dan styling CSS lewat contoh sederhana.</p></div><div class="section-badge">10 latihan</div></div>
+      <div class="practice-layout">
+        <div class="practice-feature reveal"><div class="practice-feature-top"><span class="feature-symbol">&lt;/&gt;</span><span class="feature-label">HTML + CSS COLLECTION</span></div><h3>Dari elemen sederhana<br>jadi tampilan menarik.</h3><p>Buka latihan, pelajari strukturnya, lalu modifikasi sesuai kreativitasmu.</p><div class="feature-bottom"><span>10 FILE LATIHAN</span><span class="feature-line"></span><span>HTML · CSS</span></div><div class="feature-watermark">&lt;/&gt;</div></div>
+        <div class="practice-list">
+          <a class="practice-item reveal" href="./01_Latihan_Dasar/sebelum/topik-1-sintaks-dasar.html"><span class="practice-index">01</span><span class="practice-symbol symbol-blue">&lt;/&gt;</span><span class="practice-info"><strong>Sintaks Dasar</strong><small>01_Latihan_Dasar · Sebelum</small></span><span class="practice-arrow">↗</span></a>
+          <a class="practice-item reveal" href="./01_Latihan_Dasar/sebelum/topik-2-selector-warna.html"><span class="practice-index">02</span><span class="practice-symbol symbol-purple">◉</span><span class="practice-info"><strong>Selector &amp; Warna</strong><small>01_Latihan_Dasar · Sebelum</small></span><span class="practice-arrow">↗</span></a>
+          <a class="practice-item reveal" href="./01_Latihan_Dasar/sebelum/topik-3-box-model.html"><span class="practice-index">03</span><span class="practice-symbol symbol-orange">▣</span><span class="practice-info"><strong>CSS Box Model</strong><small>01_Latihan_Dasar · Sebelum</small></span><span class="practice-arrow">↗</span></a>
+          <a class="practice-item reveal" href="./01_Latihan_Dasar/sebelum/topik-4-flexbox.html"><span class="practice-index">04</span><span class="practice-symbol symbol-green">↔</span><span class="practice-info"><strong>Flexbox</strong><small>01_Latihan_Dasar · Sebelum</small></span><span class="practice-arrow">↗</span></a>
+          <a class="practice-item reveal" href="./01_Latihan_Dasar/sebelum/topik-5-css-grid.html"><span class="practice-index">05</span><span class="practice-symbol symbol-pink">▦</span><span class="practice-info"><strong>CSS Grid</strong><small>01_Latihan_Dasar · Sebelum</small></span><span class="practice-arrow">↗</span></a>
+          <a class="practice-item reveal" href="./01_Latihan_Dasar/sebelum/topik-6-responsif.html"><span class="practice-index">06</span><span class="practice-symbol symbol-blue">▱</span><span class="practice-info"><strong>Desain Responsif</strong><small>01_Latihan_Dasar · Sebelum</small></span><span class="practice-arrow">↗</span></a>
+          <a class="practice-item reveal" href="./02_Latihan_Dasar/sebelum/kasus-1-profil.html"><span class="practice-index">07</span><span class="practice-symbol symbol-purple">♙</span><span class="practice-info"><strong>Kartu Profil</strong><small>02_Latihan_Dasar · Sebelum</small></span><span class="practice-arrow">↗</span></a>
+          <a class="practice-item reveal" href="./02_Latihan_Dasar/sebelum/kasus-2-navbar.html"><span class="practice-index">08</span><span class="practice-symbol symbol-orange">☰</span><span class="practice-info"><strong>Navbar</strong><small>02_Latihan_Dasar · Sebelum</small></span><span class="practice-arrow">↗</span></a>
+          <a class="practice-item reveal" href="./02_Latihan_Dasar/sebelum/kasus-3-galeri.html"><span class="practice-index">09</span><span class="practice-symbol symbol-green">▧</span><span class="practice-info"><strong>Galeri</strong><small>02_Latihan_Dasar · Sebelum</small></span><span class="practice-arrow">↗</span></a>
+          <a class="practice-item reveal" href="./02_Latihan_Dasar/sebelum/kasus-4-landing.html"><span class="practice-index">10</span><span class="practice-symbol symbol-pink">✦</span><span class="practice-info"><strong>Landing Page</strong><small>02_Latihan_Dasar · Sebelum</small></span><span class="practice-arrow">↗</span></a>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="about-section container" id="tentang"><div class="about-card reveal"><div class="about-mark">H<span>.</span></div><div><p class="section-eyebrow">ABOUT THIS SPACE</p><h2>Belajar hari ini,<br><span class="gradient-text">lebih jago esok hari.</span></h2><p>Halaman ini adalah pusat navigasi materi Pemrograman Web milik Hidayat. Gunakan sebagai pintu masuk untuk membuka materi pertemuan dan latihan yang tersimpan di folder proyek.</p></div><a class="about-top" href="#beranda" aria-label="Kembali ke atas">↑</a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a href="#beranda" class="brand footer-brand"><span class="brand-logo">H<span>.</span></span><span class="brand-name">hidayat<span>dev</span></span></a><p>Belajar dengan konsisten. Bangun dengan kreativitas.</p><span class="copyright">© 2026 Hidayat · D040325010</span></div></footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('is-open');
+      menuToggle.classList.toggle('is-open', open);
+      menuToggle.setAttribute('aria-expanded', String(open));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('is-open');
+      menuToggle.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }));
+
+    const searchInput = document.getElementById('lessonSearch');
+    const lessonCards = [...document.querySelectorAll('.lesson-card')];
+    const filterButtons = [...document.querySelectorAll('.filter-button')];
+    const emptyState = document.getElementById('emptyState');
+    let activeFilter = 'all';
+    function filterLessons() {
+      const query = searchInput.value.trim().toLowerCase();
+      let count = 0;
+      lessonCards.forEach(card => {
+        const matchesQuery = card.dataset.title.includes(query) || card.innerText.toLowerCase().includes(query);
+        const show = matchesQuery && (activeFilter === 'all' || card.dataset.category === activeFilter);
+        card.hidden = !show;
+        if (show) count++;
+      });
+      emptyState.hidden = count > 0;
+    }
+    searchInput.addEventListener('input', filterLessons);
+    filterButtons.forEach(button => button.addEventListener('click', () => {
+      filterButtons.forEach(item => item.classList.remove('selected'));
+      button.classList.add('selected');
+      activeFilter = button.dataset.filter;
+      filterLessons();
+    }));
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('revealed'); observer.unobserve(entry.target); }
+      }), { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(item => observer.observe(item));
+    } else {
+      document.querySelectorAll('.reveal').forEach(item => item.classList.add('revealed'));
+    }
+  </script>
+</body>
+</html>
