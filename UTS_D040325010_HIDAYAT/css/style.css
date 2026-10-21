@@ -33,7 +33,7 @@ h1, h2, h3, p { margin-top: 0; }
 .brand-thin { font-weight: 500; }
 
 /* Login page */
-.login-page { min-height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; padding: 34px 5vw 20px; background: #f4f6f9; }
+.login-page { min-height: 100vh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; padding: 34px 5vw 20px; background: #f4f610; }
 .login-layout { position: relative; z-index: 1; width: min(1100px, 100%); min-height: 650px; display: grid; grid-template-columns: 1fr 440px; align-items: center; gap: 65px; }
 .login-intro { align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; padding: 35px 0 30px; position: relative; }
 .brand-light { color: #26354c; }
@@ -90,7 +90,7 @@ h1, h2, h3, p { margin-top: 0; }
 @keyframes floatGlow { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-18px,20px) scale(1.08); } }
 
 /* Application layout / sidebar */
-.app-page { min-height: 100vh; background: #f5f7fb; }
+.app-page { min-height: 100vh; background: #f5f710; }
 .app-shell { display: flex; min-height: 100vh; }
 .sidebar { width: 250px; flex: 0 0 250px; background: var(--sidebar); color: #fff; padding: 25px 16px 17px; display: flex; flex-direction: column; min-height: 100vh; }
 .sidebar-brand { color: #fff; padding: 0 5px 35px; font-size: 13px; letter-spacing: -.3px; }
